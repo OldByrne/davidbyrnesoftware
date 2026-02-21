@@ -1,0 +1,24 @@
+<section class="services">
+  <p class="services-intro">
+    Here are some of the main areas I work in but every project is different.
+    If you've got something specific in mind, I'd be happy to
+    <a routerLink="/contact">have a chat</a> about it.
+  </p>
+
+  <div class="services-list">
+    @for (service of services; track service.title) {
+      <div class="service-card">
+        <h3 class="service-title">{{ service.title }}</h3>
+        <p class="service-description">{{ service.description }}</p>
+        <ul class="service-features">
+          @for (feature of service.features; track feature) {
+            <li>
+              <span class="feature-bullet"></span>
+              {{ feature }}
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
+</section>
