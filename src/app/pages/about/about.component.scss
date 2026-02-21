@@ -1,0 +1,76 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.photo-container {
+  width: 100%;
+  max-width: 200px;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.tech-stack {
+  margin-top: 1.5rem;
+
+  h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background-color: var(--accent-muted);
+  color: var(--accent-light);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .photo-container {
+    max-width: 150px;
+  }
+
+  .photo {
+    width: 150px;
+    height: 150px;
+  }
+}
