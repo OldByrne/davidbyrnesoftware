@@ -177,9 +177,12 @@
     font-size: 0.95rem;
   }
 
+  .tagline {
+    display: none;
+  }
+
   .sidebar-photo {
-    max-width: 200px;
-    margin-top: 1.5rem;
+    display: none;
   }
 
   .mobile-toggle {
