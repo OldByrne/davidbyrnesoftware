@@ -29,12 +29,4 @@ describe('AboutComponent', () => {
     expect(tags.length).toBeGreaterThan(0);
   });
 
-  it('should display the photo', () => {
-    const fixture = TestBed.createComponent(AboutComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    const photo = compiled.querySelector('.photo') as HTMLImageElement;
-    expect(photo).toBeTruthy();
-    expect(photo.alt).toBe('David Byrne');
-  });
 });

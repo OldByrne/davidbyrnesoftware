@@ -61,6 +61,15 @@ describe('SidebarComponent', () => {
     expect(socialLinks.length).toBe(3);
   });
 
+  it('should display the photo', () => {
+    const fixture = TestBed.createComponent(SidebarComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const photo = compiled.querySelector('.photo') as HTMLImageElement;
+    expect(photo).toBeTruthy();
+    expect(photo.alt).toBe('David Byrne');
+  });
+
   it('should start with mobile menu closed', () => {
     const fixture = TestBed.createComponent(SidebarComponent);
     const component = fixture.componentInstance;
