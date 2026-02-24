@@ -58,7 +58,7 @@ describe('SidebarComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     const socialLinks = compiled.querySelectorAll('.social-links a');
-    expect(socialLinks.length).toBe(3);
+    expect(socialLinks.length).toBe(4);
   });
 
   it('should display the photo', () => {

@@ -51,6 +51,7 @@
 
 .contact-info {
   flex: 1;
+  min-width: 0;
 
   h3 {
     font-size: 1rem;
@@ -69,6 +70,16 @@
   color: var(--text-muted);
   transition: color 0.2s ease;
   flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-arrow {
+    display: none;
+  }
+
+  .contact-footer {
+    display: none;
+  }
 }
 
 .contact-footer {
