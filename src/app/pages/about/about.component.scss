@@ -4,6 +4,24 @@
   gap: 2.5rem;
 }
 
+.mobile-photo {
+  display: none;
+
+  img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-photo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .about-content {
   display: flex;
   flex-direction: column;
