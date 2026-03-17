@@ -1,10 +1,14 @@
-<div class="spotlight-overlay"
-     [style.background]="'radial-gradient(600px at ' + spotlightX + 'px ' + spotlightY + 'px, rgba(74, 124, 89, 0.07), transparent 80%)'">
-</div>
+@if (underConstruction) {
+  <app-under-construction />
+} @else {
+  <div class="spotlight-overlay"
+       [style.background]="'radial-gradient(600px at ' + spotlightX + 'px ' + spotlightY + 'px, rgba(74, 124, 89, 0.07), transparent 80%)'">
+  </div>
 
-<div class="layout">
-  <app-sidebar></app-sidebar>
-  <main class="content">
-    <router-outlet />
-  </main>
-</div>
+  <div class="layout">
+    <app-sidebar></app-sidebar>
+    <main class="content">
+      <router-outlet />
+    </main>
+  </div>
+}
