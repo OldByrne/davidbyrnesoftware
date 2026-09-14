@@ -1,3 +1,3 @@
 export const siteConfig = {
-  underConstruction: true,
+  underConstruction: false,
 };
