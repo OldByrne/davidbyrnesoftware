@@ -1,0 +1,14 @@
+:host {
+  display: contents;
+}
+
+a {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}

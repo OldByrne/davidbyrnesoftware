@@ -61,29 +61,6 @@ describe('SidebarComponent', () => {
     expect(socialLinks.length).toBe(4);
   });
 
-  it('should have a mobile bottom social bar with the same links', () => {
-    const fixture = TestBed.createComponent(SidebarComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    const mobileSocialLinks = compiled.querySelectorAll('.mobile-social-bar a');
-    expect(mobileSocialLinks.length).toBe(4);
-  });
-
-  it('should hide the mobile bottom social bar when the mobile menu is open', () => {
-    const fixture = TestBed.createComponent(SidebarComponent);
-    const component = fixture.componentInstance;
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-
-    component.toggleMobileMenu();
-    fixture.detectChanges();
-    expect(compiled.querySelector('.mobile-social-bar')?.classList).toContain('hidden');
-
-    component.toggleMobileMenu();
-    fixture.detectChanges();
-    expect(compiled.querySelector('.mobile-social-bar')?.classList).not.toContain('hidden');
-  });
-
   it('should display the photo', () => {
     const fixture = TestBed.createComponent(SidebarComponent);
     fixture.detectChanges();
@@ -96,23 +73,23 @@ describe('SidebarComponent', () => {
   it('should start with mobile menu closed', () => {
     const fixture = TestBed.createComponent(SidebarComponent);
     const component = fixture.componentInstance;
-    expect(component.mobileMenuOpen).toBeFalse();
+    expect(component.menuOpen()).toBeFalse();
   });
 
   it('should toggle mobile menu', () => {
     const fixture = TestBed.createComponent(SidebarComponent);
     const component = fixture.componentInstance;
     component.toggleMobileMenu();
-    expect(component.mobileMenuOpen).toBeTrue();
+    expect(component.menuOpen()).toBeTrue();
     component.toggleMobileMenu();
-    expect(component.mobileMenuOpen).toBeFalse();
+    expect(component.menuOpen()).toBeFalse();
   });
 
   it('should close mobile menu', () => {
     const fixture = TestBed.createComponent(SidebarComponent);
     const component = fixture.componentInstance;
-    component.mobileMenuOpen = true;
+    component.toggleMobileMenu();
     component.closeMobileMenu();
-    expect(component.mobileMenuOpen).toBeFalse();
+    expect(component.menuOpen()).toBeFalse();
   });
 });

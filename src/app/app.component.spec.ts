@@ -65,4 +65,29 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('app-under-construction')).toBeTruthy();
     expect(compiled.querySelector('app-sidebar')).toBeNull();
   });
+
+  it('should have a mobile bottom social bar with four links', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.componentInstance.underConstruction = false;
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const mobileSocialLinks = compiled.querySelectorAll('.mobile-social-bar a');
+    expect(mobileSocialLinks.length).toBe(4);
+  });
+
+  it('should hide the mobile bottom social bar when the mobile menu is open', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.componentInstance.underConstruction = false;
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const toggle = compiled.querySelector('.mobile-toggle') as HTMLButtonElement;
+    toggle.click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('.mobile-social-bar')?.classList).toContain('hidden');
+
+    toggle.click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('.mobile-social-bar')?.classList).not.toContain('hidden');
+  });
 });
