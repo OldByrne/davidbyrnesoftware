@@ -17,14 +17,14 @@ interface Project {
 export class PortfolioComponent {
   projects: Project[] = [
     {
-      title: 'Example Client Website',
-      description: 'A modern business website built for a local company looking to establish their online presence. Features responsive design, contact integration, and optimised performance.',
-      tags: ['Angular', 'TypeScript', 'SCSS', 'Responsive'],
+      title: 'Comin soon',
+      description: 'Project is the works and is coming soon...',
+      tags: ['Next.js', 'TypeScript', 'SCSS', 'Responsive'],
     },
     {
-      title: 'Another Project',
-      description: 'A web application with custom functionality built to streamline business operations. Includes user dashboards and data management.',
-      tags: ['Web App', 'Node.js', 'Database', 'API'],
+      title: 'Also coming soon',
+      description: 'Another propject in the works that is also coming soon...',
+      tags: ['Web App', 'Angular', 'Database', 'Spring boot'],
     },
   ];
 }
