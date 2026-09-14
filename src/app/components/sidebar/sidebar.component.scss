@@ -181,6 +181,9 @@
     z-index: 20;
     opacity: 1;
     visibility: visible;
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
     transition: opacity 0.25s ease, visibility 0s linear;
 
     a {
