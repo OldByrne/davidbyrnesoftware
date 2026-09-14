@@ -1,14 +1,20 @@
 @if (underConstruction) {
   <app-under-construction />
 } @else {
-  <div class="spotlight-overlay"
-       [style.background]="'radial-gradient(600px at ' + spotlightX + 'px ' + spotlightY + 'px, rgba(74, 124, 89, 0.07), transparent 80%)'">
+  <div class="scroll-region">
+    <div class="spotlight-overlay"
+         [style.background]="'radial-gradient(600px at ' + spotlightX + 'px ' + spotlightY + 'px, rgba(74, 124, 89, 0.07), transparent 80%)'">
+    </div>
+
+    <div class="layout">
+      <app-sidebar></app-sidebar>
+      <main class="content">
+        <router-outlet />
+      </main>
+    </div>
   </div>
 
-  <div class="layout">
-    <app-sidebar></app-sidebar>
-    <main class="content">
-      <router-outlet />
-    </main>
+  <div class="mobile-social-bar" [class.hidden]="menuOpen()">
+    <app-social-links />
   </div>
 }

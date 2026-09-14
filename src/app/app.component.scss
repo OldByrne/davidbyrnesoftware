@@ -1,7 +1,14 @@
 :host {
   display: block;
-  min-height: 100vh;
+  height: 100%;
   position: relative;
+}
+
+.scroll-region {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable;
 }
 
 .spotlight-overlay {
@@ -16,7 +23,7 @@
 
 .layout {
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
   position: relative;
   z-index: 2;
   max-width: 1200px;
@@ -30,6 +37,10 @@
   max-width: var(--content-max-width);
 }
 
+.mobile-social-bar {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -39,5 +50,30 @@
   .content {
     padding: 2rem 0 7rem;
     max-width: 100%;
+  }
+
+  .mobile-social-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.85rem 0;
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--bg-card);
+    z-index: 20;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.25s ease, visibility 0s linear;
+
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+    }
   }
 }
