@@ -17,13 +17,13 @@ interface Project {
 export class PortfolioComponent {
   projects: Project[] = [
     {
-      title: 'Comin soon',
+      title: 'Coming soon',
       description: 'Project is the works and is coming soon...',
       tags: ['Next.js', 'TypeScript', 'SCSS', 'Responsive'],
     },
     {
       title: 'Also coming soon',
-      description: 'Another propject in the works that is also coming soon...',
+      description: 'Another project in the works that is also coming soon...',
       tags: ['Web App', 'Angular', 'Database', 'Spring boot'],
     },
   ];
