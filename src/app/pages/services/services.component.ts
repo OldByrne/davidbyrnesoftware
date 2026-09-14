@@ -18,7 +18,7 @@ export class ServicesComponent {
     {
       title: 'Web Design & Development',
       description: 'Custom websites built from scratch, tailored to your brand and business goals. Responsive, fast, and optimised for all devices.',
-      features: ['Responsive design', 'Modern frameworks', 'SEO-friendly', 'Performance optimised'],
+      features: ['Responsive design', 'Modern frameworks', 'Clean and refined', 'Performance optimised'],
     },
     {
       title: 'Web Applications',
@@ -27,8 +27,8 @@ export class ServicesComponent {
     },
     {
       title: 'Software Solutions',
-      description: 'Tailor made software to solve specific business problems. Automation, tooling, and integrations that save time and improve workflows.',
-      features: ['Process automation', 'Third party integrations', 'Custom tooling', 'Ongoing support'],
+      description: 'Tailor made software to solve specific business problems. Automation, tooling and integrations that save time and improve workflows.',
+      features: ['Automation', 'Third party integrations', 'Custom tooling', 'Ongoing support'],
     },
   ];
 }
